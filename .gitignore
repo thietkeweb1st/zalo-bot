@@ -1,0 +1,11 @@
+# .gitignore
+node_modules/
+session/
+npm-debug.log
+*.log
+.env
+# Các file ảnh chụp màn hình lỗi (nếu bạn không muốn đưa lên)
+*.png 
+# Các file hệ thống của Windows/macOS
+Thumbs.db
+.DS_Store

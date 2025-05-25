@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+README.md
+session/
+*.png 
+# Thêm bất kỳ file/thư mục tạm thời hoặc không cần thiết nào khác

@@ -1,0 +1,17 @@
+{
+  "name": "my-zalo-bot",
+  "version": "1.0.0",
+  "description": "My personal Zalo bot with Playwright and n8n integration",
+  "main": "bot.js",
+  "private": true,
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.1", 
+    "axios": "^1.6.8" 
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

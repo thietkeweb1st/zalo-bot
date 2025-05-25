@@ -1,0 +1,6 @@
+{
+  "n8n_webhook_url_new_message": "YOUR_N8N_WEBHOOK_URL_FOR_NEW_MESSAGES",
+  "n8n_api_endpoint_for_reply": "YOUR_N8N_API_OR_WEBHOOK_TO_TRIGGER_REPLY_LOGIC",
+  "zalo_poll_interval_ms": 10000,
+  "delay_after_send_ms": 2000
+}
