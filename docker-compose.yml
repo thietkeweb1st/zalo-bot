@@ -1,16 +1,16 @@
-version: '3.8' # Bạn có thể bỏ dòng này nếu Docker Compose của bạn báo warning
+# version: '3.8' # Bạn có thể bỏ dòng này nếu Docker Compose của bạn báo warning
 
 services:
   zalo-bot:
     build: .
-    container_name: my-zalo-bot-container
+    container_name: my-zalo-bot-container # Đổi lại tên nếu bạn muốn
     volumes:
-      - .:/app # Mount code hiện tại vào /app trong container (tiện cho development)
-      - ./session:/app/session # Mount thư mục session để lưu trữ thông tin đăng nhập
-    restart: unless-stopped
+      - .:/app 
+      - ./session:/app/session 
+    restart: unless-stopped 
     environment:
       - NODE_ENV=production
-      # Thêm các biến môi trường khác ở đây nếu cần, ví dụ:
-      # - N8N_WEBHOOK_URL=http://your-n8n-webhook-url
-    # ports: # Mở port nếu bạn cần debug hoặc bot của bạn chạy server HTTP
-      # - "3000:3000" # Ví dụ: nếu bot.js chạy server ở port 3000
+      # - BOT_PORT=3000 # Giá trị mặc định trong bot.js là 3000
+    ports: 
+      - "9222:9222" # Cho Playwright remote debugging
+      - "3000:3000" # Map port của HTTP server trong bot.js ra máy host (dùng sau)
